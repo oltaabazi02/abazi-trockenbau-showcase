@@ -48,7 +48,7 @@ const Contact = () => {
             <input type="email" placeholder={t(translations.contact.email)} value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className={inputClass} required />
             <input type="tel" placeholder={t(translations.contact.phone)} value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} className={inputClass} />
             <textarea placeholder={t(translations.contact.message)} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} rows={5} className={inputClass} required />
-            <button type="submit" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-md font-medium hover:opacity-90 transition-opacity w-full justify-center">
+            <button type="submit" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-xl font-medium hover:opacity-90 transition-opacity w-full justify-center">
               <Send size={18} /> {t(translations.contact.send)}
             </button>
           </form>

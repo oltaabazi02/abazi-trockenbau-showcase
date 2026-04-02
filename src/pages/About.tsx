@@ -49,7 +49,7 @@ const About = () => {
             <p className="text-muted-foreground leading-relaxed mb-6">
               {t(translations.about.experience)}
             </p>
-            <Link to="/contact" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-md font-medium hover:opacity-90 transition-all hover-scale">
+            <Link to="/contact" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-xl font-medium hover:opacity-90 transition-all hover-scale">
               {t(translations.home.ctaButton)} <ArrowRight size={18} />
             </Link>
           </div>
