@@ -1,14 +1,8 @@
+import { Link } from "react-router-dom";
 import { useLang } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
+import { projects } from "@/data/projects";
 import ScrollReveal from "@/components/ScrollReveal";
-import project1 from "@/assets/project1.jpg";
-import project2 from "@/assets/project2.jpg";
-import project3 from "@/assets/project3.jpg";
-import project4 from "@/assets/project4.jpg";
-import project5 from "@/assets/project5.jpg";
-import beforeAfter from "@/assets/before-after.jpg";
-
-const images = [project1, project2, project3, project4, project5, beforeAfter];
 
 const Projects = () => {
   const { t } = useLang();
@@ -26,17 +20,20 @@ const Projects = () => {
         </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {translations.projects.items.map((proj, i) => (
-            <ScrollReveal key={i} delay={i * 100} animation="animate-scale-in">
-              <div className="group overflow-hidden rounded-lg bg-card border border-border hover:shadow-xl transition-shadow">
-                <div className="overflow-hidden">
-                  <img src={images[i]} alt={t(proj.title)} loading="lazy" width={800} height={600} className="w-full h-60 object-cover group-hover:scale-110 transition-transform duration-700" />
+          {projects.map((proj, i) => (
+            <ScrollReveal key={proj.id} delay={i * 100} animation="animate-scale-in">
+              <Link to={`/projects/${proj.id}`} className="group block overflow-hidden rounded-lg bg-card border border-border hover:shadow-xl transition-shadow">
+                <div className="overflow-hidden relative">
+                  <img src={proj.cover} alt={t(proj.title)} loading="lazy" width={800} height={600} className="w-full h-60 object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <div className="absolute bottom-2 right-2 bg-foreground/70 text-primary-foreground text-xs px-2 py-1 rounded">
+                    {proj.images.length} {t({ al: "foto", de: "Fotos" })}
+                  </div>
                 </div>
                 <div className="p-5">
-                  <h3 className="font-semibold text-foreground mb-1">{t(proj.title)}</h3>
+                  <h3 className="font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">{t(proj.title)}</h3>
                   <p className="text-sm text-muted-foreground">{t(proj.desc)}</p>
                 </div>
-              </div>
+              </Link>
             </ScrollReveal>
           ))}
         </div>
