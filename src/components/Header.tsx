@@ -22,8 +22,15 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 flex items-center justify-between h-16">
-        <Link to="/" className="text-xl font-heading font-bold text-foreground">
-          ABAZI <span className="text-primary">Trockenbau</span>
+        <Link to="/" className="flex items-center gap-3 text-xl font-heading font-bold text-foreground">
+          <img
+            src="/AT.jpeg"
+            alt="AT logo"
+            className="h-16 w-16 rounded-full object-cover"
+          />
+          <span>
+            ABAZI <span className="text-primary">Trockenbau</span>
+          </span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-6">
@@ -73,8 +80,15 @@ const Header = () => {
               <div className="mobile-menu-gradient border-b border-border px-5 pb-6 pt-6">
                 <div className="flex items-start justify-between gap-4">
                   <div>
-                    <SheetTitle className="text-left font-heading text-2xl font-bold">
-                      ABAZI <span className="text-primary">Trockenbau</span>
+                    <SheetTitle className="flex items-center gap-3 text-left font-heading text-2xl font-bold">
+                      <img
+                        src="/AT.jpeg"
+                        alt="AT logo"
+                        className="h-10 w-10 rounded-full object-cover"
+                      />
+                      <span>
+                        ABAZI <span className="text-primary">Trockenbau</span>
+                      </span>
                     </SheetTitle>
                     <SheetDescription className="mt-2 max-w-xs text-left text-sm text-muted-foreground">
                       {lang === "de"
