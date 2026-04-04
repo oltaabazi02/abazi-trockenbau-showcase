@@ -12,19 +12,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div>
             <h3 className="mb-4 flex items-center gap-3 text-lg font-heading font-bold text-foreground">
-              <img
-                src="/AT.jpeg"
-                alt="AT logo"
-                className="h-10 w-10 rounded-full object-cover"
-              />
               <span>
-                ABAZI <span className="text-primary">Trockenbau</span>
+                Abazi <span className="text-primary">Trockenbau</span>
               </span>
             </h3>
             <p className="text-sm leading-relaxed text-muted-foreground">
               {t({
                 al: "Shërbime profesionale të ndërtimit të brendshëm me cilësi të lartë.",
-                de: "Professionelle Innenausbau-Dienstleistungen in höchster Qualität.",
+                de: "Professionelle Trockenbau-Dienstleistungen in höchster Qualität",
               })}
             </p>
           </div>
@@ -50,26 +45,16 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="mb-4 font-semibold text-foreground">Links</h4>
+            <h4 className="mb-4 font-semibold text-foreground">Pronar:</h4>
             <div className="space-y-2 text-sm">
-              <Link
-                to="/impressum"
-                className="block text-muted-foreground transition-colors hover:text-primary"
-              >
-                {t(translations.footer.impressum)}
-              </Link>
-              <Link
-                to="/datenschutz"
-                className="block text-muted-foreground transition-colors hover:text-primary"
-              >
-                {t(translations.footer.datenschutz)}
-              </Link>
+              <p className="text-muted-foreground"> Haradin Abazi</p>
             </div>
           </div>
         </div>
 
         <div className="border-t border-border mt-8 pt-6 text-center text-xs text-muted-foreground">
-              © {new Date().getFullYear()} Abazi Trockenbau. {t(translations.footer.rights)}
+          © {new Date().getFullYear()} Abazi Trockenbau.{" "}
+          {t(translations.footer.rights)}
         </div>
       </div>
     </footer>

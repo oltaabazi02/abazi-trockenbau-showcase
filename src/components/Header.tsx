@@ -3,7 +3,14 @@ import { ArrowRight, Menu, Moon, Sun } from "lucide-react";
 import { useLang } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
 import { useTheme } from "@/hooks/useTheme";
-import { Sheet, SheetClose, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
@@ -22,14 +29,12 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 flex items-center justify-between h-16">
-        <Link to="/" className="flex items-center gap-3 text-xl font-heading font-bold text-foreground">
-          <img
-            src="/AT.jpeg"
-            alt="AT logo"
-            className="h-16 w-16 rounded-full object-cover"
-          />
+        <Link
+          to="/"
+          className="flex items-center gap-3 text-xl font-heading font-bold text-foreground"
+        >
           <span>
-            ABAZI <span className="text-primary">Trockenbau</span>
+            Abazi <span className="text-primary">Trockenbau</span>
           </span>
         </Link>
 
@@ -39,7 +44,9 @@ const Header = () => {
               key={link.to}
               to={link.to}
               className={`text-sm font-medium transition-colors hover:text-primary ${
-                location.pathname === link.to ? "text-primary" : "text-muted-foreground"
+                location.pathname === link.to
+                  ? "text-primary"
+                  : "text-muted-foreground"
               }`}
             >
               {link.label}
@@ -63,7 +70,10 @@ const Header = () => {
             </button>
           </div>
 
-          <button onClick={toggle} className="p-2 rounded-xl text-muted-foreground hover:text-foreground transition-colors">
+          <button
+            onClick={toggle}
+            className="p-2 rounded-xl text-muted-foreground hover:text-foreground transition-colors"
+          >
             {dark ? <Sun size={18} /> : <Moon size={18} />}
           </button>
 
@@ -138,7 +148,10 @@ const Header = () => {
                         style={{ animationDelay: `${index * 70}ms` }}
                       >
                         <span>{link.label}</span>
-                        <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-1" />
+                        <ArrowRight
+                          size={18}
+                          className="transition-transform duration-300 group-hover:translate-x-1"
+                        />
                       </Link>
                     </SheetClose>
                   ))}

@@ -15,20 +15,30 @@ const contactSchema = z.object({
 const Contact = () => {
   const { t } = useLang();
   const { toast } = useToast();
-  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     const result = contactSchema.safeParse(form);
     if (!result.success) {
-      toast({ title: "Error", description: result.error.issues[0].message, variant: "destructive" });
+      toast({
+        title: "Error",
+        description: result.error.issues[0].message,
+        variant: "destructive",
+      });
       return;
     }
     toast({ title: t(translations.contact.success) });
     setForm({ name: "", email: "", phone: "", message: "" });
   };
 
-  const inputClass = "w-full px-4 py-3 rounded-md border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring";
+  const inputClass =
+    "w-full px-4 py-3 rounded-md border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring";
 
   return (
     <section className="py-20">
@@ -44,11 +54,41 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
           <form onSubmit={handleSubmit} className="space-y-5">
-            <input type="text" placeholder={t(translations.contact.name)} value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} className={inputClass} required />
-            <input type="email" placeholder={t(translations.contact.email)} value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className={inputClass} required />
-            <input type="tel" placeholder={t(translations.contact.phone)} value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} className={inputClass} />
-            <textarea placeholder={t(translations.contact.message)} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} rows={5} className={inputClass} required />
-            <button type="submit" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-xl font-medium hover:opacity-90 transition-opacity w-full justify-center">
+            <input
+              type="text"
+              placeholder={t(translations.contact.name)}
+              value={form.name}
+              onChange={(e) => setForm({ ...form, name: e.target.value })}
+              className={inputClass}
+              required
+            />
+            <input
+              type="email"
+              placeholder={t(translations.contact.email)}
+              value={form.email}
+              onChange={(e) => setForm({ ...form, email: e.target.value })}
+              className={inputClass}
+              required
+            />
+            <input
+              type="tel"
+              placeholder={t(translations.contact.phone)}
+              value={form.phone}
+              onChange={(e) => setForm({ ...form, phone: e.target.value })}
+              className={inputClass}
+            />
+            <textarea
+              placeholder={t(translations.contact.message)}
+              value={form.message}
+              onChange={(e) => setForm({ ...form, message: e.target.value })}
+              rows={5}
+              className={inputClass}
+              required
+            />
+            <button
+              type="submit"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-xl font-medium hover:opacity-90 transition-opacity w-full justify-center"
+            >
               <Send size={18} /> {t(translations.contact.send)}
             </button>
           </form>
@@ -60,8 +100,12 @@ const Contact = () => {
                   <Phone size={18} className="text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">{t(translations.contact.phone)}</p>
-                  <p className="font-medium text-foreground">{translations.contact.info.phone}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {t(translations.contact.phone)}
+                  </p>
+                  <p className="font-medium text-foreground">
+                    {translations.contact.info.phone}
+                  </p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
@@ -69,8 +113,12 @@ const Contact = () => {
                   <Mail size={18} className="text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">{t(translations.contact.email)}</p>
-                  <p className="font-medium text-foreground">{translations.contact.info.email}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {t(translations.contact.email)}
+                  </p>
+                  <p className="font-medium text-foreground">
+                    {translations.contact.info.email}
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -78,15 +126,19 @@ const Contact = () => {
                   <MapPin size={18} className="text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">{t({ al: "Adresa", de: "Adresse" })}</p>
-                  <p className="font-medium text-foreground">{t(translations.contact.info.address)}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {t({ al: "Adresa", de: "Adresse" })}
+                  </p>
+                  <p className="font-medium text-foreground">
+                    {t(translations.contact.info.address)}
+                  </p>
                 </div>
               </div>
             </div>
 
             <div className="rounded-lg overflow-hidden border border-border h-64">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.5!2d11.576!3d48.137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDA4JzEzLjIiTiAxMcKwMzQnMzMuNiJF!5e0!3m2!1sde!2sde!4v1!5m2!1sde!2sde"
+                src="https://www.google.com/maps?q=Prinzenstr.+7,+67065+Ludwigshafen,+Deutschland&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
