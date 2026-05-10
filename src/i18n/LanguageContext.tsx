@@ -10,10 +10,7 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [lang, setLangState] = useState<Lang>(() => {
-    const saved = localStorage.getItem("abazi-lang");
-    return (saved === "de" || saved === "al") ? saved : "de";
-  });
+  const [lang, setLangState] = useState<Lang>("de");
 
   const setLang = (l: Lang) => {
     setLangState(l);
