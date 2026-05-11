@@ -25,7 +25,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "renovim-apartamenti-muenchen",
-    title: { al: "Renovim apartamenti - München", de: "Wohnungsrenovierung - München" },
+    title: { al: "Projekt 111", de: "Projekt 111" },
     desc: { al: "Renovim komplet i një apartamenti 80m² me Trockenbau dhe lyerje.", de: "Komplettrenovierung einer 80m² Wohnung mit Trockenbau und Malerarbeiten." },
     cover: project1,
     images: [project1, g1, g2, g3, g7, g8, project5, g4, beforeAfter, project2],
@@ -36,7 +36,7 @@ export const projects: Project[] = [
   },
   {
     id: "montim-tavani-stuttgart",
-    title: { al: "Montim tavani - Stuttgart", de: "Deckenmontage - Stuttgart" },
+    title: { al: "Projekt 112", de: "Projekt 112" },
     desc: { al: "Instalim i tavaneve të varura në një zyrë moderne.", de: "Installation von Abhangdecken in einem modernen Büro." },
     cover: project2,
     images: [project2, g5, project1, g3, g7, g2, g1, project5],
@@ -47,7 +47,7 @@ export const projects: Project[] = [
   },
   {
     id: "renovim-banjo-nuernberg",
-    title: { al: "Renovim banjo - Nürnberg", de: "Badrenovierung - Nürnberg" },
+    title: { al: "Projekt 113", de: "Projekt 113" },
     desc: { al: "Transformim komplet i banjës me materiale cilësore.", de: "Komplette Badumgestaltung mit hochwertigen Materialien." },
     cover: project3,
     images: [project3, g1, g4, g7, project1, g2, g8, beforeAfter, project5, g3],
@@ -58,7 +58,7 @@ export const projects: Project[] = [
   },
   {
     id: "izolim-termik-augsburg",
-    title: { al: "Izolim termik - Augsburg", de: "Wärmedämmung - Augsburg" },
+    title: { al: "Projekt 114", de: "Projekt 114" },
     desc: { al: "Izolim i mureve të jashtme për kursim të energjisë.", de: "Außenwanddämmung für Energieeinsparung." },
     cover: project4,
     images: [project4, g6, g3, g1, g7, project1, g5, g2],
@@ -69,7 +69,7 @@ export const projects: Project[] = [
   },
   {
     id: "innenausbau-frankfurt",
-    title: { al: "Innenausbau - Frankfurt", de: "Innenausbau - Frankfurt" },
+    title: { al: "Projekt 115", de: "Projekt 115" },
     desc: { al: "Ndërtim i brendshëm komplet për një shtëpi të re.", de: "Kompletter Innenausbau für ein Neubauhaus." },
     cover: project5,
     images: [project5, g8, g2, g4, g1, g3, g7, project2, g5, beforeAfter],
@@ -80,7 +80,7 @@ export const projects: Project[] = [
   },
   {
     id: "para-pas-berlin",
-    title: { al: "Para / Pas - Berlin", de: "Vorher / Nachher - Berlin" },
+    title: { al: "Projekt 116", de: "Projekt 116" },
     desc: { al: "Transformim dramatik i një dhome të vjetër.", de: "Dramatische Verwandlung eines alten Zimmers." },
     cover: beforeAfter,
     images: [beforeAfter, g1, g7, g8, project5, g2, g4, g3, project1, g5],

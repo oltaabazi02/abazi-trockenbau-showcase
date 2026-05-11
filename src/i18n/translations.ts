@@ -4,7 +4,7 @@ export const translations = {
   nav: {
     home: { al: "Ballina", de: "Startseite" },
     services: { al: "Shërbimet", de: "Leistungen" },
-    projects: { al: "Projektet", de: "Referenzen" },
+    projects: { al: "Galeria", de: "Galerie" },
     about: { al: "Rreth nesh", de: "Über uns" },
     contact: { al: "Kontakt", de: "Kontakt" },
   },
@@ -18,7 +18,7 @@ export const translations = {
       de: "Trockenbau, Innenausbau und Renovierung in höchster Qualität",
     },
     cta: { al: "Kërkoni ofertë", de: "Angebot anfordern" },
-    ctaSecondary: { al: "Shiko projektet", de: "Referenzen ansehen" },
+    ctaSecondary: { al: "Shiko galerinë", de: "Galerie ansehen" },
   },
   home: {
     servicesTitle: { al: "Shërbimet tona", de: "Unsere Leistungen" },
@@ -26,10 +26,10 @@ export const translations = {
       al: "Ofrojmë zgjidhje të plota për ndërtimin e brendshëm",
       de: "Wir bieten komplette Lösungen für den Innenausbau",
     },
-    projectsTitle: { al: "Projektet e fundit", de: "Aktuelle Projekte" },
+    projectsTitle: { al: "Galeria", de: "Galerie" },
     projectsSubtitle: {
-      al: "Shikoni punët tona të fundit të përfunduara me sukses",
-      de: "Sehen Sie unsere aktuellen, erfolgreich abgeschlossenen Projekte",
+      al: "Shikoni disa nga punët tona të përfunduara",
+      de: "Sehen Sie einige unserer abgeschlossenen Arbeiten",
     },
     ctaTitle: {
       al: "Keni një projekt në mendje?",
@@ -84,10 +84,10 @@ export const translations = {
     },
   },
   projects: {
-    title: { al: "Projektet tona", de: "Unsere Referenzen" },
+    title: { al: "Galeria", de: "Galerie" },
     subtitle: {
-      al: "Punë të përfunduara me sukses që flasin vetë",
-      de: "Erfolgreich abgeschlossene Projekte, die für sich sprechen",
+      al: "Të gjitha fotot e punëve tona në një vend",
+      de: "Alle Fotos unserer Arbeiten an einem Ort",
     },
     items: [
       {

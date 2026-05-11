@@ -26,9 +26,9 @@ const services = [
 ];
 
 const previewProjects = [
-  { img: project1, idx: 0 },
-  { img: project2, idx: 1 },
-  { img: project3, idx: 2 },
+  { img: project1, idx: 0, title: "Projekt 111" },
+  { img: project2, idx: 1, title: "Projekt 112" },
+  { img: project3, idx: 2, title: "Projekt 113" },
 ];
 
 const Index = () => {
@@ -78,7 +78,7 @@ const Index = () => {
                 {t(translations.hero.cta)} <ArrowRight size={18} />
               </Link>
               <Link
-                to="/projects"
+                to="/gallery"
                 className="inline-flex items-center gap-2 border border-primary-foreground/30 text-primary-foreground px-6 py-3 rounded-xl font-medium hover:bg-primary-foreground/10 transition-colors"
               >
                 {t(translations.hero.ctaSecondary)}
@@ -191,9 +191,7 @@ const Index = () => {
             </p>
           </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {previewProjects.map((p, i) => {
-              const proj = translations.projects.items[p.idx];
-              return (
+            {previewProjects.map((p, i) => (
                 <ScrollReveal
                   key={p.idx}
                   delay={i * 150}
@@ -203,7 +201,7 @@ const Index = () => {
                     <div className="overflow-hidden">
                       <img
                         src={p.img}
-                        alt={t(proj.title)}
+                        alt={p.title}
                         loading="lazy"
                         width={800}
                         height={600}
@@ -213,20 +211,16 @@ const Index = () => {
                     <div className="p-5">
                       <div className="mb-3 h-1 w-16 rounded-full bg-primary/70 transition-all duration-500 group-hover:w-24" />
                       <h3 className="font-semibold text-foreground mb-1">
-                        {t(proj.title)}
+                        {p.title}
                       </h3>
-                      <p className="text-sm text-muted-foreground">
-                        {t(proj.desc)}
-                      </p>
                     </div>
                   </div>
                 </ScrollReveal>
-              );
-            })}
+              ))}
           </div>
           <ScrollReveal className="text-center mt-8">
             <Link
-              to="/projects"
+              to="/gallery"
               className="story-link inline-flex items-center gap-2 text-primary font-medium"
             >
               <span>{t(translations.hero.ctaSecondary)}</span>{" "}
