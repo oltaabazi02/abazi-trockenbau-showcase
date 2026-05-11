@@ -92,7 +92,7 @@ const Header = () => {
                   <div>
                     <SheetTitle className="flex items-center gap-3 text-left font-heading text-2xl font-bold">
                       <img
-                        src="/AT.jpeg"
+                        src="/AT-logo.png"
                         alt="AT logo"
                         className="h-10 w-10 rounded-full object-cover"
                       />
