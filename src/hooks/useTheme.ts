@@ -4,7 +4,7 @@ export const useTheme = () => {
   const [dark, setDark] = useState(() => {
     const saved = localStorage.getItem("abazi-theme");
     if (saved) return saved === "dark";
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    return false;
   });
 
   useEffect(() => {
